@@ -1,0 +1,142 @@
+@use '../../foundation/base' as base;
+
+/*aside２つのとき*/
+.p-sidebar__title {
+    background-color: base.$bg-color-beige2;
+    padding-top: 24%;
+    padding-bottom: 15%;
+    padding-left: 10%;
+    margin-bottom: 0;
+    display: block;
+
+    & h2 {
+        @include base.font-rem(24);
+    }
+}
+
+
+.p-sidebar {
+    background-color: base.$bg-color-beige2;
+    height: 100%;
+    
+
+    & a {
+        color: base.$font-color-gray;
+    }
+
+    @include base.breakpoint(pc) {
+        display: block;
+    }
+
+
+    &__menu {
+        @include base.breakpoint(pc){
+            padding: 5% 10% 5% 10%;
+            color: base.$font-color-gray;
+        }
+    }
+
+    &__menuCategory {
+        @include base.breakpoint(pc) {
+            display: block;
+            margin-bottom: 10%;
+            @include base.font-rem(24);
+        }
+    }
+    
+    &__menuChoice {
+        @include base.breakpoint(pc) {
+            margin-left: 5%;
+            @include base.font-rem(20);
+            font-weight: 400;
+        }
+    }
+    
+    &__menuChoiceChild {
+        @include base.breakpoint(pc) {
+            margin-bottom: 8%;
+        }
+    }
+}
+
+
+
+
+
+/*aside1つのとき*/
+/*
+.p-sidebar {
+    background-color: base.$bg-color-beige2;
+    
+    & a {
+        color: base.$font-color-gray;
+    }
+
+    display: none;
+    position: relative;
+
+    @include base.breakpoint(pc) {
+        display: block;
+        
+    }
+}
+
+
+.p-sidebar__title {
+    @include base.font-rem(24);
+
+    
+    @include base.breakpoint(tablet) {
+        position: absolute;
+        top: 20px;
+        left: -60px;
+    }
+
+    @include base.breakpoint(pc) {
+        position: initial;
+        margin-top: 15%;
+        margin-left: 10%;
+    }
+}
+
+
+/*pc画面のとき(通常表示）
+.p-sidebar {
+
+    &__list {
+        @include base.breakpoint(pc){
+            margin-top: 40%;
+        }
+    }
+
+    &__menu {
+        @include base.breakpoint(pc){
+            padding: 5% 10% 5% 10%;
+            color: base.$font-color-gray;
+        }
+    }
+
+    &__menuCategory {
+        @include base.breakpoint(pc) {
+            display: block;
+            margin-bottom: 10%;
+            @include base.font-rem(24);
+        }
+    }
+    
+    &__menuChoice {
+        @include base.breakpoint(pc) {
+            margin-left: 5%;
+            @include base.font-rem(20);
+            font-weight: 400;
+        }
+    }
+    
+    &__menuChoiceChild {
+        @include base.breakpoint(pc) {
+            margin-bottom: 8%;
+        }
+    }
+}
+
+*/

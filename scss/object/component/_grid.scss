@@ -1,0 +1,26 @@
+@use '../../foundation/base' as base;
+
+.c-gridcontainer__frontMain {
+    display: grid;
+    place-content: center;
+    /*place-items: end;*/
+    grid-row-gap: 1.5%;
+    grid-template-columns: repeat(1,95%); 
+    
+    @include base.breakpoint(tablet) {
+        grid-column-gap: 5% ;
+        grid-template-columns: repeat(2,47%); 
+    }
+
+    @include base.breakpoint(pc) {
+        grid-column-gap: 5% ;
+        grid-template-columns: repeat(2,47%);  
+    }
+    
+}
+
+.c-griditem__frontMain {
+    display: grid;
+    grid-template-rows: subgrid;
+    
+}

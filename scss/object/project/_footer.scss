@@ -1,0 +1,33 @@
+@use '../../foundation/base' as base;
+
+.p-footer {
+    background-image: url(../../../Images/frontpage_footer.png);
+    background-size: cover;
+    color: base.$font-color-white;
+    padding: 2%;
+    font-weight: 400;
+}
+
+.p-footer__about {
+    @include base.font-rem(20);
+    margin-top: 1%;
+    margin-bottom: 2%;
+
+}
+
+.p-footer__info::after {
+    content: "|";
+    color: base.$font-color-white;
+    @include base.font-rem(20);
+    padding: 10px;
+}
+
+
+.p-footer__history {
+    position: relative;
+}
+
+.p-footer__copyright {
+    margin-top: 1%;
+    @include base.font-rem(14);
+}

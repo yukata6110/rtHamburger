@@ -1,0 +1,1010 @@
+@charset "UTF-8";
+/* resset.dev • v5.0.2 */
+/* # =================================================================
+   # Global selectors
+   # ================================================================= */
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS */
+  word-break: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
+}
+
+*,
+::before,
+::after {
+  background-repeat: no-repeat; /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
+  box-sizing: inherit;
+}
+
+::before,
+::after {
+  text-decoration: inherit; /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
+  vertical-align: inherit;
+}
+
+* {
+  padding: 0; /* Reset `padding` and `margin` of all elements */
+  margin: 0;
+}
+
+/* # =================================================================
+   # General elements
+   # ================================================================= */
+hr {
+  overflow: visible; /* Show the overflow in Edge and IE */
+  height: 0; /* Add the correct box sizing in Firefox */
+  color: inherit; /* Correct border color in Firefox. */
+}
+
+details,
+main {
+  display: block; /* Render the `main` element consistently in IE. */
+}
+
+summary {
+  display: list-item; /* Add the correct display in all browsers */
+}
+
+small {
+  font-size: 80%; /* Set font-size to 80% in `small` elements */
+}
+
+[hidden] {
+  display: none; /* Add the correct display in IE */
+}
+
+abbr[title] {
+  border-bottom: none; /* Remove the bottom border in Chrome 57 */
+  /* Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari */
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+a {
+  background-color: transparent; /* Remove the gray background on active links in IE 10 */
+}
+
+a:active,
+a:hover {
+  outline-width: 0; /* Remove the outline when hovering in all browsers */
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace; /* Specify the font family of code elements */
+}
+
+pre {
+  font-size: 1em; /* Correct the odd `em` font sizing in all browsers */
+}
+
+b,
+strong {
+  font-weight: bolder; /* Add the correct font weight in Chrome, Edge, and Safari */
+}
+
+/* https://gist.github.com/unruthless/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+table {
+  border-color: inherit; /* Correct border color in all Chrome, Edge, and Safari. */
+  text-indent: 0; /* Remove text indentation in Chrome, Edge, and Safari */
+}
+
+iframe {
+  border-style: none;
+}
+
+/* # =================================================================
+   # Forms
+   # ================================================================= */
+input {
+  border-radius: 0;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto; /* Correct the cursor style of increment and decrement buttons in Chrome */
+}
+
+[type=search] {
+  -webkit-appearance: textfield; /* Correct the odd appearance in Chrome and Safari */
+  outline-offset: -2px; /* Correct the outline style in Safari */
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; /* Remove the inner padding in Chrome and Safari on macOS */
+}
+
+textarea {
+  overflow: auto; /* Internet Explorer 11+ */
+  resize: vertical; /* Specify textarea resizability */
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit; /* Specify font inheritance of form elements */
+}
+
+optgroup {
+  font-weight: bold; /* Restore the font weight unset by the previous rule */
+}
+
+button {
+  overflow: visible; /* Address `overflow` set to `hidden` in IE 8/9/10/11 */
+}
+
+button,
+select {
+  text-transform: none; /* Firefox 40+, Internet Explorer 11- */
+}
+
+/* Apply cursor pointer to button elements */
+button,
+[type=button],
+[type=reset],
+[type=submit],
+[role=button] {
+  cursor: pointer;
+}
+
+/* Remove inner padding and border in Firefox 4+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* Replace focus style removed in the border reset above */
+button:-moz-focusring,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  outline: 1px dotted ButtonText;
+}
+
+button,
+html [type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button; /* Correct the inability to style clickable types in iOS */
+}
+
+/* Remove the default button styling in all browsers */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border-style: none;
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline-width: 0;
+}
+
+/* Style select like a standard input */
+select {
+  -moz-appearance: none; /* Firefox 36+ */
+  -webkit-appearance: none; /* Chrome 41+ */
+}
+
+select::-ms-expand {
+  display: none; /* Internet Explorer 11+ */
+}
+
+select::-ms-value {
+  color: currentColor; /* Internet Explorer 11+ */
+}
+
+legend {
+  border: 0; /* Correct `color` not being inherited in IE 8/9/10/11 */
+  color: inherit; /* Correct the color inheritance from `fieldset` elements in IE */
+  display: table; /* Correct the text wrapping in Edge and IE */
+  max-width: 100%; /* Correct the text wrapping in Edge and IE */
+  white-space: normal; /* Correct the text wrapping in Edge and IE */
+  max-width: 100%; /* Correct the text wrapping in Edge 18- and IE */
+}
+
+::-webkit-file-upload-button {
+  /* Correct the inability to style clickable types in iOS and Safari */
+  -webkit-appearance: button;
+  color: inherit;
+  font: inherit; /* Change font properties to `inherit` in Chrome and Safari */
+}
+
+/* Replace pointer cursor in disabled elements */
+[disabled] {
+  cursor: default;
+}
+
+/* # =================================================================
+   # Specify media element style
+   # ================================================================= */
+img {
+  border-style: none; /* Remove border when inside `a` element in IE 8/9/10 */
+}
+
+/* Add the correct vertical alignment in Chrome, Firefox, and Opera */
+progress {
+  vertical-align: baseline;
+}
+
+/* # =================================================================
+   # Accessibility
+   # ================================================================= */
+/* Specify the progress cursor of updating elements */
+[aria-busy=true] {
+  cursor: progress;
+}
+
+/* Specify the pointer cursor of trigger elements */
+[aria-controls] {
+  cursor: pointer;
+}
+
+/* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+[aria-disabled=true] {
+  cursor: default;
+}
+
+/*Foundation*/
+body {
+  font-family: "M PLUS 1";
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+  color: #707070;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin: 0;
+}
+
+ul, li, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*mixin*/
+/*breakpoint*/
+/*font-size*/
+/*文字の色*/
+/*背景色*/
+.icon {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.l-footer {
+  /*height: 5%;*/
+  width: 100%;
+}
+
+.l-header {
+  width: 100%;
+  background-color: #FFF7EF;
+}
+
+.l-main {
+  height: 88%;
+  width: 100%;
+}
+
+.l-sidebar {
+  width: 19.1566892244%;
+}
+
+.l-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+@media (min-width: 375px) {
+  .l-container {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .l-container {
+    width: 100%;
+  }
+}
+
+.l-wrapper {
+  width: 80.8433107756%;
+  height: 100%;
+}
+@media (min-width: 375px) {
+  .l-wrapper {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .l-wrapper {
+    width: 100%;
+  }
+}
+
+/*front*/
+.c-bgImage__MV1 {
+  aspect-ratio: 375/285;
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 768px) {
+  .c-bgImage__MV1 {
+    aspect-ratio: 834/285;
+  }
+}
+@media (min-width: 1280px) {
+  .c-bgImage__MV1 {
+    aspect-ratio: 1553/530;
+  }
+}
+
+/*archiveとarchive-search*/
+.c-bgImage__MV2 {
+  aspect-ratio: 375/285;
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 768px) {
+  .c-bgImage__MV2 {
+    aspect-ratio: 834/285;
+  }
+}
+@media (min-width: 1280px) {
+  .c-bgImage__MV2 {
+    aspect-ratio: 1553/239;
+  }
+}
+
+/*singleとpage*/
+.c-bgImage__MV3 {
+  aspect-ratio: 375/225;
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 768px) {
+  .c-bgImage__MV3 {
+    aspect-ratio: 834/505;
+  }
+}
+@media (min-width: 1280px) {
+  .c-bgImage__MV3 {
+    aspect-ratio: 1553/500;
+  }
+}
+
+/*ftontpageのmain*/
+.c-bgImage__order {
+  aspect-ratio: 335/642;
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 768px) {
+  .c-bgImage__order {
+    aspect-ratio: 357/681;
+  }
+}
+@media (min-width: 1280px) {
+  .c-bgImage__order {
+    aspect-ratio: 616/1197;
+  }
+}
+
+.c-box__search {
+  border: 1px solid #707070;
+  border-radius: 5px;
+}
+
+.c-item__center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1280px) {
+  .c-item__center {
+    flex-direction: row;
+  }
+}
+
+.c-item__headingUnderline::after {
+  position: absolute;
+  content: "";
+  width: 8%;
+  height: 5px;
+  background-color: #FFFFFF;
+  top: 12%;
+  left: 5%;
+}
+
+.c-fontfam__en {
+  font-family: Roboto;
+}
+
+.c-gridcontainer__frontMain {
+  display: grid;
+  place-content: center;
+  /*place-items: end;*/
+  grid-row-gap: 1.5%;
+  grid-template-columns: repeat(1, 95%);
+}
+@media (min-width: 768px) {
+  .c-gridcontainer__frontMain {
+    grid-column-gap: 5%;
+    grid-template-columns: repeat(2, 47%);
+  }
+}
+@media (min-width: 1280px) {
+  .c-gridcontainer__frontMain {
+    grid-column-gap: 5%;
+    grid-template-columns: repeat(2, 47%);
+  }
+}
+
+.c-griditem__frontMain {
+  display: grid;
+  grid-template-rows: subgrid;
+}
+
+.c-flex__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-flex__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-header {
+  padding-left: 4%;
+  padding-right: 2%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.p-header__logo {
+  font-size: 2rem;
+  text-align: center;
+}
+@media (min-width: 1280px) {
+  .p-header__logo {
+    text-align: left;
+  }
+}
+
+.p-header__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  max-width: 600px;
+  position: relative;
+  padding-top: 20px;
+}
+@media (min-width: 1280px) {
+  .p-header__form {
+    justify-content: flex-end;
+    padding-left: 50%;
+    padding-top: 0;
+    width: 80%;
+    max-width: none;
+  }
+}
+
+.p-header__searchicon {
+  width: 75%;
+}
+
+.p-header__search {
+  width: 100%;
+  padding-left: 30px;
+  line-height: 2;
+  background-color: #FFFFFF;
+}
+
+.p-header__searchicon::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f002";
+  position: absolute;
+  top: 55%;
+  left: 2%;
+}
+@media (min-width: 1280px) {
+  .p-header__searchicon::before {
+    top: 25%;
+    left: 63.5%;
+  }
+}
+
+.p-header__submit {
+  width: 25%;
+  height: auto;
+  background-color: color-mix(in srgb, #F2EDE9 100%, #DED8D3 100%);
+  margin-left: 5px;
+  font-family: "M PLUS 1";
+  color: #707070;
+  line-height: 2;
+}
+
+.p-mainImage {
+  background-image: url(../../../Images/frontpage_eyecatch.png);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  padding: 5%;
+  font-size: 1.625rem;
+}
+@media (min-width: 768px) {
+  .p-mainImage {
+    padding: 10%;
+  }
+}
+@media (min-width: 1280px) {
+  .p-mainImage {
+    padding: 5%;
+  }
+}
+
+.p-mainTitle {
+  color: #FFFFFF;
+  font-size: 4rem;
+}
+
+.p-order {
+  padding: 5% 5% 10% 5%;
+}
+@media (min-width: 1280px) {
+  .p-order {
+    padding: 7%;
+  }
+}
+
+.p-order__takeout {
+  background-image: url(../../../Images/frontpage_takeout.jpg);
+  position: relative;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  padding: 5%;
+}
+
+.p-order__eatin {
+  background-image: url(../../../Images/frontpage_eatin.jpg);
+  grid-row: 2/3;
+  grid-column: 1/2;
+  padding: 5%;
+}
+@media (min-width: 768px) {
+  .p-order__eatin {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+}
+@media (min-width: 1280px) {
+  .p-order__eatin {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+}
+
+.p-main__List {
+  margin-top: 60%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.p-main__textBox {
+  color: #3c2A10;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2%;
+  padding: 3% 5% 5% 3%;
+}
+.p-main__textBox dt {
+  margin-bottom: 1%;
+  font-size: 1.5rem;
+  line-height: 2;
+}
+.p-main__textBox dd {
+  font-weight: 400;
+}
+
+.p-main__section {
+  position: relative;
+  width: 100%;
+}
+
+.p-main__sectionText {
+  width: 100%;
+  color: #FFFFFF;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2855) 50%, transparent 50%);
+  padding: 7%;
+}
+@media (min-width: 768px) {
+  .p-main__sectionText {
+    width: 100%;
+    padding: 5%;
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.2855);
+  }
+}
+@media (min-width: 1280px) {
+  .p-main__sectionText {
+    width: 60%;
+    padding: 5%;
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.2855);
+  }
+}
+.p-main__sectionText h2 {
+  font-size: 2.25rem;
+  margin-bottom: 8%;
+}
+.p-main__sectionText p {
+  font-size: 1rem;
+  line-height: 2.5;
+}
+
+.p-main__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -200;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+}
+.p-main__map iframe {
+  aspect-ratio: 691/375;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  opacity: 0.5971;
+}
+@media (min-width: 768px) {
+  .p-main__map iframe {
+    aspect-ratio: 1653/649;
+  }
+}
+@media (min-width: 1280px) {
+  .p-main__map iframe {
+    aspect-ratio: 1653/649;
+  }
+}
+
+/* A：バックに真っ黒おいた時
+.p-main__section {
+    position: relative;
+    background-color: base.$bg-color-black;
+}
+
+.p-main__map {
+    width: 100%;
+
+    & iframe {
+        aspect-ratio: 691/375;
+        object-fit: cover;
+        opacity: 0.7;
+        width: 100%;
+
+        @include base.breakpoint(tablet) {
+            aspect-ratio: 1653/649;
+        }
+
+        @include base.breakpoint(pc) {
+            aspect-ratio: 1653/649;
+        }
+    }
+}
+
+.p-main__sectionText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(base.$bg-color-black, 0.2855);
+
+    color: base.$font-color-white;
+    padding: 7%;
+
+    @include base.breakpoint(tablet) {
+        padding: 5%;
+    }
+
+    @include base.breakpoint(pc) {
+        width: 60%;
+        padding: 5%;
+    }
+
+
+    & h2 {
+        @include base.font-rem(36);
+        margin-bottom: 8%;
+    }
+
+    & p {
+        @include base.font-rem(16);
+        line-height: 2.5;
+
+    }
+}
+*/
+/*B:地図の上に２種類の黒を被せるとき
+.p-main__section {
+    position: relative;
+
+}
+
+.p-main__map {
+    width: 100%;
+
+    & iframe {
+        width: 100%;
+
+    }
+}
+.p-main_sectionBgcolor {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(base.$bg-color-black, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+}
+
+.p-main__sectionText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    background-color: rgba(base.$bg-color-black, 0.2855);
+    width: 100%;
+    height: 100%;
+    color: base.$font-color-white;
+    padding: 7%;
+
+    @include base.breakpoint(tablet) {
+        width: 100%;
+        padding: 5%;
+    }
+
+    @include base.breakpoint(pc) {
+        width: 60%;
+        padding: 5%;
+    }
+
+
+    & h2 {
+        @include base.font-rem(36);
+        margin-bottom: 8%;
+    }
+
+    & p {
+        @include base.font-rem(16);
+        line-height: 2.5;
+    }
+}
+*/
+.p-footer {
+  background-image: url(../../../Images/frontpage_footer.png);
+  background-size: cover;
+  color: #FFFFFF;
+  padding: 2%;
+  font-weight: 400;
+}
+
+.p-footer__about {
+  font-size: 1.25rem;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+
+.p-footer__info::after {
+  content: "|";
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  padding: 10px;
+}
+
+.p-footer__history {
+  position: relative;
+}
+
+.p-footer__copyright {
+  margin-top: 1%;
+  font-size: 0.875rem;
+}
+
+/*aside２つのとき*/
+.p-sidebar__title {
+  background-color: #F2ede9;
+  padding-top: 24%;
+  padding-bottom: 15%;
+  padding-left: 10%;
+  margin-bottom: 0;
+  display: block;
+}
+.p-sidebar__title h2 {
+  font-size: 1.5rem;
+}
+
+.p-sidebar {
+  background-color: #F2ede9;
+  height: 100%;
+}
+.p-sidebar a {
+  color: #707070;
+}
+@media (min-width: 1280px) {
+  .p-sidebar {
+    display: block;
+  }
+}
+@media (min-width: 1280px) {
+  .p-sidebar__menu {
+    padding: 5% 10% 5% 10%;
+    color: #707070;
+  }
+}
+@media (min-width: 1280px) {
+  .p-sidebar__menuCategory {
+    display: block;
+    margin-bottom: 10%;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .p-sidebar__menuChoice {
+    margin-left: 5%;
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1280px) {
+  .p-sidebar__menuChoiceChild {
+    margin-bottom: 8%;
+  }
+}
+
+/*aside1つのとき*/
+/*
+.p-sidebar {
+    background-color: base.$bg-color-beige2;
+
+    & a {
+        color: base.$font-color-gray;
+    }
+
+    display: none;
+    position: relative;
+
+    @include base.breakpoint(pc) {
+        display: block;
+
+    }
+}
+
+
+.p-sidebar__title {
+    @include base.font-rem(24);
+
+
+    @include base.breakpoint(tablet) {
+        position: absolute;
+        top: 20px;
+        left: -60px;
+    }
+
+    @include base.breakpoint(pc) {
+        position: initial;
+        margin-top: 15%;
+        margin-left: 10%;
+    }
+}
+
+
+/*pc画面のとき(通常表示）
+.p-sidebar {
+
+    &__list {
+        @include base.breakpoint(pc){
+            margin-top: 40%;
+        }
+    }
+
+    &__menu {
+        @include base.breakpoint(pc){
+            padding: 5% 10% 5% 10%;
+            color: base.$font-color-gray;
+        }
+    }
+
+    &__menuCategory {
+        @include base.breakpoint(pc) {
+            display: block;
+            margin-bottom: 10%;
+            @include base.font-rem(24);
+        }
+    }
+
+    &__menuChoice {
+        @include base.breakpoint(pc) {
+            margin-left: 5%;
+            @include base.font-rem(20);
+            font-weight: 400;
+        }
+    }
+
+    &__menuChoiceChild {
+        @include base.breakpoint(pc) {
+            margin-bottom: 8%;
+        }
+    }
+}
+
+*/
+/*Foundation*/
+/*layout*/
+/*object/component*/
+/*object/project*/
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,25 @@
+/*Foundation*/
+@use "../css/ress.css";
+@use "foundation/base";
+@use "foundation/fontawasome";
+
+/*layout*/
+@use "layout/footer";
+@use "layout/header";
+@use "layout/main";
+@use "layout/sidebar";
+@use "layout/layout";
+
+/*object/component*/
+@use "object/component/bgImage";
+@use "object/component/box";
+@use "object/component/item";
+@use "object/component/fontfam";
+@use "object/component/grid";
+@use "object/component/flex";
+
+/*object/project*/
+@use "object/project/header" as h;
+@use "object/project/main" as m;
+@use "object/project/footer" as f;
+@use "object/project/sidebar" as s;
