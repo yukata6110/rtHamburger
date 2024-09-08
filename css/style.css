@@ -328,6 +328,7 @@ img {
 
 .l-footer {
   /*height: 5%;*/
+  /*width: calc(100% - (368px / 1921px*100%));*/
   width: 100%;
 }
 
@@ -342,7 +343,19 @@ img {
 }
 
 .l-sidebar {
-  width: 19.1566892244%;
+  width: 40%;
+  /*　後からこの設定にする
+  width: 0;    
+
+  @include base.breakpoint(pc) {
+      width: calc(368px / 1921px*100%);
+  }
+  */
+}
+@media (min-width: 1280px) {
+  .l-sidebar {
+    width: 20%;
+  }
 }
 
 .l-container {
@@ -876,42 +889,92 @@ img {
 }
 
 /*aside２つのとき*/
+.p-sidebar {
+  position: relative;
+}
+
 .p-sidebar__title {
-  background-color: #F2ede9;
-  padding-top: 24%;
-  padding-bottom: 15%;
-  padding-left: 10%;
-  margin-bottom: 0;
-  display: block;
+  position: absolute;
+  top: 0.5%;
+  left: -90px;
+}
+@media (min-width: 1280px) {
+  .p-sidebar__title {
+    position: static;
+    background-color: #F2ede9;
+    padding-top: 24%;
+    padding-bottom: 15%;
+    padding-left: 10%;
+    margin-bottom: 0;
+    display: block;
+  }
 }
 .p-sidebar__title h2 {
   font-size: 1.5rem;
 }
 
-.p-sidebar {
-  background-color: #F2ede9;
+.p-sidebar__btnMenu {
+  color: #707070;
+}
+
+.p-sidebar__list {
+  /*display: none;*/
+  position: absolute;
+  left: -100%;
+  border: 5px solid red;
   height: 100%;
 }
-.p-sidebar a {
+.p-sidebar__list a {
   color: #707070;
 }
 @media (min-width: 1280px) {
-  .p-sidebar {
+  .p-sidebar__list {
+    position: static;
     display: block;
+    background-color: #F2ede9;
+    height: 100%;
   }
+  .p-sidebar__list a {
+    color: #707070;
+  }
+}
+
+.p-sidebar__wrap {
+  margin-top: 75%;
+}
+@media (min-width: 1280px) {
+  .p-sidebar__wrap {
+    margin-top: 0;
+  }
+}
+
+.p-sidebar__menu {
+  padding: 5% 10% 5% 10%;
 }
 @media (min-width: 1280px) {
   .p-sidebar__menu {
     padding: 5% 10% 5% 10%;
-    color: #707070;
   }
+}
+
+.p-sidebar__menuCategory {
+  display: block;
+  margin-bottom: 15%;
+  font-size: 1.5rem;
 }
 @media (min-width: 1280px) {
   .p-sidebar__menuCategory {
     display: block;
+    margin-top: 0;
     margin-bottom: 10%;
     font-size: 1.5rem;
   }
+}
+
+.p-sidebar__menuChoice {
+  margin-left: 5%;
+  font-size: 1.25rem;
+  font-weight: 400;
 }
 @media (min-width: 1280px) {
   .p-sidebar__menuChoice {
@@ -920,89 +983,20 @@ img {
     font-weight: 400;
   }
 }
+
+.p-sidebar__menuChoiceChild {
+  margin-bottom: 8%;
+}
 @media (min-width: 1280px) {
   .p-sidebar__menuChoiceChild {
     margin-bottom: 8%;
   }
 }
 
-/*aside1つのとき*/
-/*
-.p-sidebar {
-    background-color: base.$bg-color-beige2;
-
-    & a {
-        color: base.$font-color-gray;
-    }
-
-    display: none;
-    position: relative;
-
-    @include base.breakpoint(pc) {
-        display: block;
-
-    }
+.js-sidebar__open {
+  width: 19.1566892244%;
 }
 
-
-.p-sidebar__title {
-    @include base.font-rem(24);
-
-
-    @include base.breakpoint(tablet) {
-        position: absolute;
-        top: 20px;
-        left: -60px;
-    }
-
-    @include base.breakpoint(pc) {
-        position: initial;
-        margin-top: 15%;
-        margin-left: 10%;
-    }
-}
-
-
-/*pc画面のとき(通常表示）
-.p-sidebar {
-
-    &__list {
-        @include base.breakpoint(pc){
-            margin-top: 40%;
-        }
-    }
-
-    &__menu {
-        @include base.breakpoint(pc){
-            padding: 5% 10% 5% 10%;
-            color: base.$font-color-gray;
-        }
-    }
-
-    &__menuCategory {
-        @include base.breakpoint(pc) {
-            display: block;
-            margin-bottom: 10%;
-            @include base.font-rem(24);
-        }
-    }
-
-    &__menuChoice {
-        @include base.breakpoint(pc) {
-            margin-left: 5%;
-            @include base.font-rem(20);
-            font-weight: 400;
-        }
-    }
-
-    &__menuChoiceChild {
-        @include base.breakpoint(pc) {
-            margin-bottom: 8%;
-        }
-    }
-}
-
-*/
 /*Foundation*/
 /*layout*/
 /*object/component*/
