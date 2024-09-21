@@ -1,23 +1,12 @@
 @use '../foundation/base' as base;
 
 .l-sidebar {
-    width: 40%;
-
+    width: 0;
 
     @include base.breakpoint(pc) {
         width: 20%;
     }
-    
-
-    /*　後からこの設定にする
-    width: 0;    
-    
-    @include base.breakpoint(pc) {
-        width: calc(368px / 1921px*100%);
-    }
-    */
-    
-    
-    
-    
 }
+
+
+
