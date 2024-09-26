@@ -10,14 +10,3 @@
         flex-direction: row;
     }
 }
-
-
-.c-item__headingUnderline::after {
-    position: absolute;
-    content: "";
-    width: 8%;
-    height: 5px;
-    background-color: base.$bg-color-white;
-    top: 12%;
-    left: 5%;
-}

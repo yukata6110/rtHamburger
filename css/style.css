@@ -467,16 +467,6 @@ img {
   }
 }
 
-.c-item__headingUnderline::after {
-  position: absolute;
-  content: "";
-  width: 8%;
-  height: 5px;
-  background-color: #FFFFFF;
-  top: 12%;
-  left: 5%;
-}
-
 .c-fontfam__en {
   font-family: Roboto;
 }
@@ -515,6 +505,34 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.c-item__headingUnderline {
+  position: relative;
+}
+
+.c-item__headingUnderline::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 4px;
+  background-color: #FFFFFF;
+  top: 120px;
+  left: 0;
+}
+
+.c-item__headingUnderlineLong {
+  position: relative;
+}
+
+.c-item__headingUnderlineLong::after {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color: #FFFFFF;
+  top: 80px;
+  left: 0;
 }
 
 .p-header {
@@ -926,7 +944,7 @@ img {
 }
 
 .p-sidebar__wrap {
-  margin-top: 75%;
+  margin-top: 40%;
 }
 @media (min-width: 1280px) {
   .p-sidebar__wrap {
@@ -941,19 +959,25 @@ img {
 .p-sidebar__menuCategory {
   display: block;
   margin-bottom: 15%;
-  font-size: 1.5rem;
+  font-size: 2.25rem;
 }
 @media (min-width: 1280px) {
   .p-sidebar__menuCategory {
     margin-top: 0;
     margin-bottom: 10%;
+    font-size: 1.5rem;
   }
 }
 
 .p-sidebar__menuChoice {
   margin-left: 5%;
-  font-size: 1.25rem;
+  font-size: 1.875rem;
   font-weight: 400;
+}
+@media (min-width: 1280px) {
+  .p-sidebar__menuChoice {
+    font-size: 1.25rem;
+  }
 }
 
 .p-sidebar__menuChoiceChild {
@@ -976,11 +1000,11 @@ img {
 @media (min-width: 375px) {
   .js-sidebar__open {
     transform: translateX(-100%);
-    width: 50vw;
+    width: 90vw;
     position: relative;
     background-color: #FFF7EF;
     z-index: 100;
-    transition: transform 0.5s;
+    transition: transform 0.5s 0.1s; /*duration delay*/
   }
 }
 @media (min-width: 768px) {
@@ -990,12 +1014,18 @@ img {
     position: relative;
     background-color: #FFF7EF;
     z-index: 100;
-    transition: transform 0.5s;
+    transition: transform 0.5s 0.1s;
   }
 }
 
+/*サイドバー出てきたときの背景グレーになる*/
+.js-sidebar__openBg {
+  position: relative;
+  transition: 1s;
+}
+
 @media (min-width: 375px) {
-  .js-sidebar__open::before {
+  .js-sidebar__openBg::before {
     background-color: rgba(0, 0, 0, 0.2855);
     content: "";
     width: 100vw;
@@ -1008,7 +1038,7 @@ img {
   }
 }
 @media (min-width: 768px) {
-  .js-sidebar__open::before {
+  .js-sidebar__openBg::before {
     background-color: rgba(0, 0, 0, 0.2855);
     content: "";
     width: 100vw;
@@ -1021,6 +1051,7 @@ img {
   }
 }
 
+/*MENUボタンから×印*/
 .js-btnMenu__open::before {
   position: absolute;
   content: "";

@@ -31,7 +31,6 @@
     color: base.$font-color-gray;
 }
 
-
 .p-sidebar__list {
     position: absolute;
     height: 100%;
@@ -48,7 +47,7 @@
 }
 
 .p-sidebar__wrap {
-    margin-top: 75%;
+    margin-top: 40%;
     
     @include base.breakpoint(pc) {
         margin-top: 0;
@@ -62,19 +61,24 @@
 .p-sidebar__menuCategory {
     display: block;
     margin-bottom: 15%;
-    @include base.font-rem(24);
+    @include base.font-rem(36);
 
     @include base.breakpoint(pc) {
         margin-top: 0;
         margin-bottom: 10%;
+        @include base.font-rem(24);
     }
 
 }
 
 .p-sidebar__menuChoice {
     margin-left: 5%;
-    @include base.font-rem(20);
+    @include base.font-rem(30);
     font-weight: 400;
+
+    @include base.breakpoint(pc) {
+        @include base.font-rem(20);
+    }
 }
 
 .p-sidebar__menuChoiceChild {
@@ -97,11 +101,11 @@
 .js-sidebar__open {
     @include base.breakpoint(sp){
         transform: translateX(-100%);
-        width: 50vw;
+        width: 90vw;
         position: relative;
         background-color: base.$bg-color-beige1;
         z-index: 100;
-        transition: transform 0.5s;
+        transition: transform 0.5s 0.1s; /*duration delay*/
     }
 
     @include base.breakpoint(tablet) {
@@ -110,12 +114,18 @@
         position: relative;
         background-color: base.$bg-color-beige1;
         z-index: 100;
-        transition: transform 0.5s;
+        transition: transform 0.5s 0.1s;
     }
     
 }
 
-.js-sidebar__open::before {
+/*サイドバー出てきたときの背景グレーになる*/
+.js-sidebar__openBg {
+    position: relative;
+    transition: 1s;
+}
+
+.js-sidebar__openBg::before {
     @include base.breakpoint(sp) {
         background-color: rgba(base.$bg-color-black, 0.2855);
         content: "";
@@ -127,6 +137,7 @@
         display: block;
         height: 100%;
         
+        
     }
     @include base.breakpoint(tablet) {
         background-color: rgba(base.$bg-color-black, 0.2855);
@@ -139,11 +150,12 @@
         display: block;
         height: 100%;
         
+        
     }
 }
 
 
-
+/*MENUボタンから×印*/
 .js-btnMenu__open::before {
     position: absolute;
     content: "";
