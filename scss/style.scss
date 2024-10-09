@@ -24,3 +24,8 @@
 @use "object/project/main" as m;
 @use "object/project/footer" as f;
 @use "object/project/sidebar" as s;
+@use "object/project/search-form";
+@use "object/project/main-image";
+@use "object/project/main-order";
+@use "object/project/main-map";
+@use "object/project/btn";

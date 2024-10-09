@@ -1,71 +1,20 @@
 @use '../../foundation/base' as base;
 
-.p-mainImage {
-    background-image: url(../../../Images/frontpage_eyecatch.png);
-    color: base.$font-color-white;
-    display: flex;
-    align-items: center;
-    padding: 5%;
-    @include base.font-rem(26);
-
-    @include base.breakpoint(tablet) {
-        padding: 10%;
-    }
-
-    @include base.breakpoint(pc) {
-        padding: 5%;
-    }
-}
-
+/*main部分のテキスト関係*/
 .p-mainTitle {
     color: base.$font-color-white;
     @include base.font-rem(64);
 }
 
-.p-order {
-    padding: 5% 5% 10% 5%;
-
-    @include base.breakpoint(pc) {
-        padding: 7%;
-    }
-}
-
-.p-order__takeout {
-    background-image: url(../../../Images/frontpage_takeout.jpg);
-    position: relative;
-    grid-row: 1/2;
-    grid-column: 1/2;
-    padding: 5%;
-}
-
-.p-order__eatin {
-    background-image: url(../../../Images/frontpage_eatin.jpg);
-    grid-row: 2/3 ;
-    grid-column: 1/2;
-    padding: 5%;
-
-    @include base.breakpoint(tablet) {
-        grid-row: 1/2;
-        grid-column: 2/3;
-    }
-
-    @include base.breakpoint(pc) {
-        grid-row: 1/2;
-        grid-column: 2/3;
-    }
-}
-
 .p-main__List {
     margin-top: 60%;
-    display: flex;
     justify-content: flex-end;
-    flex-direction: column;
 }
 
 .p-main__textBox {
     color: base.$font-color-brown;
     background-color: rgba(base.$bg-color-white, 0.8);
-    margin-bottom: 2%;
+    margin-bottom: 5%;
     padding: 3% 5% 5% 3%;
     
     & dt {
@@ -77,9 +26,9 @@
     & dd {
         font-weight: 400;
     }
-
 }
 
+/*下部分：テキストと地図*/
 .p-main__section {
     position: relative;
     width: 100%;
@@ -116,147 +65,3 @@
         line-height: 2.5;
     }
 }
-
-.p-main__map {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -200;
-    width: 100%;
-    height: 100%;
-    background-color: base.$bg-color-black;
-
-    & iframe {
-        aspect-ratio: 691/375;
-        object-fit: cover;
-        opacity: 0.7;
-        width: 100%;
-        height: 100%;
-        z-index: -100;
-        opacity: 0.5971;
-
-        @include base.breakpoint(tablet) {
-            aspect-ratio: 1653/649;
-        }
-
-        @include base.breakpoint(pc) {
-            aspect-ratio: 1653/649;
-        }
-    }
-}
-/* A：バックに真っ黒おいた時
-.p-main__section {
-    position: relative;
-    background-color: base.$bg-color-black;
-}
-
-.p-main__map {
-    width: 100%;
-    
-    & iframe {
-        aspect-ratio: 691/375;
-        object-fit: cover;
-        opacity: 0.7;
-        width: 100%;
-
-        @include base.breakpoint(tablet) {
-            aspect-ratio: 1653/649;
-        }
-
-        @include base.breakpoint(pc) {
-            aspect-ratio: 1653/649;
-        }
-    }
-}
-
-.p-main__sectionText {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(base.$bg-color-black, 0.2855);
-    
-    color: base.$font-color-white;
-    padding: 7%;
-    
-    @include base.breakpoint(tablet) {
-        padding: 5%;
-    }
-    
-    @include base.breakpoint(pc) {
-        width: 60%;
-        padding: 5%;
-    }
-    
-
-    & h2 {
-        @include base.font-rem(36);
-        margin-bottom: 8%;
-    }
-
-    & p {
-        @include base.font-rem(16);
-        line-height: 2.5;
-        
-    }
-}
-*/
-
-
-/*B:地図の上に２種類の黒を被せるとき
-.p-main__section {
-    position: relative;
-    
-}
-
-.p-main__map {
-    width: 100%;
-    
-    & iframe {
-        width: 100%;
-        
-    }
-}
-.p-main_sectionBgcolor {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(base.$bg-color-black, 0.3);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 100;
-
-}
-
-.p-main__sectionText {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 200;
-    background-color: rgba(base.$bg-color-black, 0.2855);
-    width: 100%;
-    height: 100%;
-    color: base.$font-color-white;
-    padding: 7%;
-    
-    @include base.breakpoint(tablet) {
-        width: 100%;
-        padding: 5%;
-    }
-    
-    @include base.breakpoint(pc) {
-        width: 60%;
-        padding: 5%;
-    }
-    
-
-    & h2 {
-        @include base.font-rem(36);
-        margin-bottom: 8%;
-    }
-
-    & p {
-        @include base.font-rem(16);
-        line-height: 2.5;
-    }
-}
-*/

@@ -1,0 +1,28 @@
+@use '../../foundation/base' as base;
+
+
+/*MENUボタンから×印*/
+.js-btnMenu__open::before {
+    position: absolute;
+    content: "";
+    top: 20px;
+    right: 35px;
+    width: 5px;
+    height: 35px;
+    background-color: base.$bg-color-gray;
+    transform: rotate(-45deg);
+    z-index: 200;
+}
+
+.js-btnMenu__open::after {
+    position: absolute;
+    content: "";
+    top: 20px;
+    right: 35px;
+    width: 5px;
+    height: 35px;
+    background-color: base.$bg-color-gray;
+    transform: rotate(45deg);
+    z-index: 200;
+
+}

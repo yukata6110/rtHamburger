@@ -29,6 +29,10 @@
 
 .p-sidebar__btnMenu {
     color: base.$font-color-gray;
+
+    @include base.breakpoint(pc) {
+        pointer-events: none;
+    }
 }
 
 .p-sidebar__list {
@@ -95,27 +99,15 @@
         transform: translateX(0);
         transition: transform 0.5s;
     }
-    
 }
 
 .js-sidebar__open {
-    @include base.breakpoint(sp){
-        transform: translateX(-100%);
-        width: 90vw;
-        position: relative;
-        background-color: base.$bg-color-beige1;
-        z-index: 100;
-        transition: transform 0.5s 0.1s; /*duration delay*/
-    }
-
-    @include base.breakpoint(tablet) {
-        transform: translateX(-100%);
-        width: 50vw;
-        position: relative;
-        background-color: base.$bg-color-beige1;
-        z-index: 100;
-        transition: transform 0.5s 0.1s;
-    }
+    transform: translateX(-100%);
+    width: 90vw;
+    position: relative;
+    background-color: base.$bg-color-beige1;
+    z-index: 100;
+    transition: transform 0.5s 0.1s; /*duration delay*/
     
 }
 
@@ -126,56 +118,13 @@
 }
 
 .js-sidebar__openBg::before {
-    @include base.breakpoint(sp) {
-        background-color: rgba(base.$bg-color-black, 0.2855);
-        content: "";
-        width: 100vw;
-        position: fixed;
-        z-index: 10;
-        top: 0;
-        left:0;
-        display: block;
-        height: 100%;
-        
-        
-    }
-    @include base.breakpoint(tablet) {
-        background-color: rgba(base.$bg-color-black, 0.2855);
-        content: "";
-        width: 100vw;
-        position: fixed;
-        z-index: 10;
-        top: 0;
-        left:0;
-        display: block;
-        height: 100%;
-        
-        
-    }
-}
-
-
-/*MENUボタンから×印*/
-.js-btnMenu__open::before {
-    position: absolute;
+    background-color: rgba(base.$bg-color-black, 0.2855);
     content: "";
-    top: 20px;
-    right: 35px;
-    width: 5px;
-    height: 35px;
-    background-color: base.$bg-color-gray;
-    transform: rotate(-45deg);
-    z-index: 200;
-}
-
-.js-btnMenu__open::after {
-    position: absolute;
-    content: "";
-    top: 20px;
-    right: 35px;
-    width: 5px;
-    height: 35px;
-    background-color: base.$bg-color-gray;
-    transform: rotate(45deg);
-    z-index: 200;
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left:0;
+    display: block;
+    height: 100%;
 }
