@@ -1,6 +1,6 @@
 @use '../../foundation/base' as base;
 
-.c-gridcontainer__frontMain {
+.c-grid-container-frontMain {
     display: grid;
     place-content: center;
     grid-row-gap: 1.5%;
@@ -18,7 +18,7 @@
     
 }
 
-.c-griditem__frontMain {
+.c-grid-item-frontMain {
     display: grid;
     grid-template-rows: subgrid;
     

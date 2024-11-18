@@ -1,5 +1,5 @@
 @use '../../foundation/base' as base;
-.p-header__form {
+.p-header-form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,18 +17,18 @@
     }
 }
 
-.p-header__searchicon {
+.p-header-searchicon {
     width: 75%;
 }
 
-.p-header__search {
+.p-header-search {
     width: 100%;  
     padding-left: 30px;
     line-height: 2;
     background-color: base.$bg-color-white;
 }
 
-.p-header__searchicon::before {
+.p-header-searchicon::before {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     content: '\f002';
@@ -42,7 +42,7 @@
     }
 }
 
-.p-header__submit {
+.p-header-submit {
     width: 25%;
     height: auto;
     background-color: color-mix(in srgb, #F2EDE9 100%, #DED8D3 100%);

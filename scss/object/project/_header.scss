@@ -1,5 +1,4 @@
 @use '../../foundation/base' as base;
-@use "sass:math";
 
 .p-header {
     padding-left: 4%;
@@ -8,7 +7,7 @@
     padding-bottom: 3rem;
 }
 
-.p-header__logo {
+.p-header-logo {
     @include base.font-rem(32);
     text-align: center;
     

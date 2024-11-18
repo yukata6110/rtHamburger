@@ -1,8 +1,11 @@
 @use '../../foundation/base' as base;
 
+/*PC画面では×印非表示*/
+.js-btn-menu {
+    position: relative;
+}
 
-/*MENUボタンから×印*/
-.js-btnMenu__open::before {
+.js-btn-menu::before {
     position: absolute;
     content: "";
     top: 20px;
@@ -12,9 +15,12 @@
     background-color: base.$bg-color-gray;
     transform: rotate(-45deg);
     z-index: 200;
+    visibility: hidden;
+    opacity: 0;
+    
 }
 
-.js-btnMenu__open::after {
+.js-btn-menu::after {
     position: absolute;
     content: "";
     top: 20px;
@@ -24,5 +30,43 @@
     background-color: base.$bg-color-gray;
     transform: rotate(45deg);
     z-index: 200;
+    visibility: hidden;
+    opacity: 0;
+    
+}
+
+
+
+
+/*MENUボタンから×印*/
+.js-btn-menu__open::before {
+    position: absolute;
+    content: "";
+    top: 20px;
+    right: 35px;
+    width: 5px;
+    height: 35px;
+    background-color: base.$bg-color-gray;
+    transform: rotate(-45deg);
+    z-index: 200;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    
+}
+
+.js-btn-menu__open::after {
+    position: absolute;
+    content: "";
+    top: 20px;
+    right: 35px;
+    width: 5px;
+    height: 35px;
+    background-color: base.$bg-color-gray;
+    transform: rotate(45deg);
+    z-index: 200;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
 
 }

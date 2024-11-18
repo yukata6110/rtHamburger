@@ -1,7 +1,7 @@
 @use '../../foundation/base' as base;
 
 /*front*/
-.c-bgImage__MV1 {
+.c-bg-Image-MV1 {
     aspect-ratio: 375/285;
     background-size: cover;
     background-position: center;
@@ -16,7 +16,7 @@
 }
 
 /*archiveとarchive-search*/
-.c-bgImage__MV2 {
+.c-bg-Image-MV2 {
     aspect-ratio: 375/285;
     background-size: cover;
     background-position: center;
@@ -31,7 +31,7 @@
 }
 
 /*singleとpage*/
-.c-bgImage__MV3 {
+.c-bg-Image-MV3 {
     aspect-ratio: 375/225;
     background-size: cover;
     background-position: center;
@@ -46,7 +46,7 @@
 }
 
 /*ftontpageのmain*/
-.c-bgImage__order {
+.c-bg-Image-order {
     aspect-ratio: 335/642;
     background-size: cover;
     background-position: center;

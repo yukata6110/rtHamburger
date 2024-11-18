@@ -6,7 +6,7 @@
     
 }
 
-.p-sidebar__title {
+.p-sidebar-title {
     position: absolute;
     top: 0.5%;
     left: -90px;
@@ -27,7 +27,7 @@
     }
 }
 
-.p-sidebar__btnMenu {
+.p-sidebar-btn-menu {
     color: base.$font-color-gray;
 
     @include base.breakpoint(pc) {
@@ -35,7 +35,7 @@
     }
 }
 
-.p-sidebar__list {
+.p-sidebar-list {
     position: absolute;
     height: 100%;
 
@@ -50,7 +50,7 @@
     }
 }
 
-.p-sidebar__wrap {
+.p-sidebar-wrap {
     margin-top: 40%;
     
     @include base.breakpoint(pc) {
@@ -58,11 +58,11 @@
     }
 }
 
-.p-sidebar__menu {
+.p-sidebar-menu {
     padding: 5% 10% 5% 10%;
 }
 
-.p-sidebar__menuCategory {
+.p-sidebar-menu-category {
     display: block;
     margin-bottom: 15%;
     @include base.font-rem(36);
@@ -75,7 +75,7 @@
 
 }
 
-.p-sidebar__menuChoice {
+.p-sidebar-menu-choice {
     margin-left: 5%;
     @include base.font-rem(30);
     font-weight: 400;
@@ -85,46 +85,6 @@
     }
 }
 
-.p-sidebar__menuChoiceChild {
+.p-sidebar-menu-choice-child {
     margin-bottom: 8%;
-}
-
-.js-sidebar {
-    @include base.breakpoint(sp) {
-        transform: translateX(0);
-        transition: transform 0.5s;
-    }
-
-    @include base.breakpoint(tablet) {
-        transform: translateX(0);
-        transition: transform 0.5s;
-    }
-}
-
-.js-sidebar__open {
-    transform: translateX(-100%);
-    width: 90vw;
-    position: relative;
-    background-color: base.$bg-color-beige1;
-    z-index: 100;
-    transition: transform 0.5s 0.1s; /*duration delay*/
-    
-}
-
-/*サイドバー出てきたときの背景グレーになる*/
-.js-sidebar__openBg {
-    position: relative;
-    transition: 1s;
-}
-
-.js-sidebar__openBg::before {
-    background-color: rgba(base.$bg-color-black, 0.2855);
-    content: "";
-    width: 100vw;
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    left:0;
-    display: block;
-    height: 100%;
 }

@@ -8,14 +8,14 @@
     font-weight: 400;
 }
 
-.p-footer__about {
+.p-footer-about {
     @include base.font-rem(20);
     margin-top: 1%;
     margin-bottom: 2%;
 
 }
 
-.p-footer__info::after {
+.p-footer-info::after {
     content: "|";
     color: base.$font-color-white;
     @include base.font-rem(20);
@@ -23,11 +23,11 @@
 }
 
 
-.p-footer__history {
+.p-footer-history {
     position: relative;
 }
 
-.p-footer__copyright {
+.p-footer-copyright {
     margin-top: 1%;
     @include base.font-rem(14);
 }

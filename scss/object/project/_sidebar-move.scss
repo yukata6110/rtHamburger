@@ -1,0 +1,60 @@
+@use '../../foundation/base' as base;
+
+/*jsでサイドバーオープン・クローズ*/
+/*隠れている状態*/
+.js-sidebar {
+    @include base.breakpoint(sp) {
+        transform: translateX(0);
+        transition: transform 2s;
+    }
+
+    @include base.breakpoint(tablet) {
+        transform: translateX(0);
+        transition: transform 2s;
+    }
+}
+
+/*開いた状態*/
+.js-sidebar__open {
+    transform: translateX(-100%);
+    width: 90vw;
+    position: relative;
+    background-color: base.$bg-color-beige1;
+    z-index: 100;
+    
+    
+}
+
+/*MENUクリック前のopenBg*/
+.js-sidebar__bg {
+    position: relative;
+    
+}
+
+.js-sidebar__bg::before {
+    background-color: base.$bg-color-black;
+    content: "";
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left:0;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s, visibility 1s;
+}
+
+/*サイドバー出てきたときの背景グレーになる*/
+.js-sidebar__openBg {
+    position: relative;
+    
+}
+
+.js-sidebar__openBg::before {
+    opacity: 0.2855;
+    visibility: visible;
+    transition: opacity 1s, visibility 1s;
+
+}
+

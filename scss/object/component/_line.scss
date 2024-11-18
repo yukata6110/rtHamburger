@@ -1,10 +1,10 @@
 @use '../../foundation/base' as base;
 
-.c-item__headingUnderline {
+.c-line-headingUnderline {
     position: relative;
 }
 
-.c-item__headingUnderline::after {
+.c-line-headingUnderline::after {
     position: absolute;
     content: "";
     width: 50px;
@@ -14,11 +14,11 @@
     left: 0;
 }
 
-.c-item__headingUnderlineLong {
+.c-line-headingUnderlineLong {
     position: relative;
 }
 
-.c-item__headingUnderlineLong::after {
+.c-line-headingUnderlineLong::after {
     position: absolute;
     content: "";
     width: 100px;
