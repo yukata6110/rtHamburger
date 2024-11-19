@@ -39,7 +39,7 @@
 
 
 /*MENUボタンから×印*/
-.js-btn-menu__open::before {
+.js-btn-menu-open::before {
     position: absolute;
     content: "";
     top: 20px;
@@ -55,7 +55,7 @@
     
 }
 
-.js-btn-menu__open::after {
+.js-btn-menu-open::after {
     position: absolute;
     content: "";
     top: 20px;

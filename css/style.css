@@ -908,7 +908,7 @@ img {
 }
 
 /*MENUボタンから×印*/
-.js-btn-menu__open::before {
+.js-btn-menu-open::before {
   position: absolute;
   content: "";
   top: 20px;
@@ -923,7 +923,7 @@ img {
   transition: 0.5s;
 }
 
-.js-btn-menu__open::after {
+.js-btn-menu-open::after {
   position: absolute;
   content: "";
   top: 20px;
@@ -943,31 +943,35 @@ img {
 @media (min-width: 375px) {
   .js-sidebar {
     transform: translateX(0);
-    transition: transform 2s;
   }
 }
 @media (min-width: 768px) {
   .js-sidebar {
     transform: translateX(0);
-    transition: transform 2s;
   }
 }
 
 /*開いた状態*/
-.js-sidebar__open {
+.js-sidebar-open {
   transform: translateX(-100%);
   width: 90vw;
   position: relative;
   background-color: #FFF7EF;
   z-index: 100;
+  transition: 1s;
+}
+@media (min-width: 768px) {
+  .js-sidebar-open {
+    width: 45vw;
+  }
 }
 
 /*MENUクリック前のopenBg*/
-.js-sidebar__bg {
+.js-sidebar-bg {
   position: relative;
 }
 
-.js-sidebar__bg::before {
+.js-sidebar-bg::before {
   background-color: #000000;
   content: "";
   width: 100vw;
@@ -982,11 +986,11 @@ img {
 }
 
 /*サイドバー出てきたときの背景グレーになる*/
-.js-sidebar__openBg {
+.js-sidebar-openBg {
   position: relative;
 }
 
-.js-sidebar__openBg::before {
+.js-sidebar-openBg::before {
   opacity: 0.2855;
   visibility: visible;
   transition: opacity 1s, visibility 1s;
