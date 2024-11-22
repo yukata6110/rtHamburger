@@ -351,37 +351,6 @@ img {
   }
 }
 
-.l-container {
-  display: flex;
-  justify-content: center;
-  height: 100%;
-}
-@media (min-width: 375px) {
-  .l-container {
-    width: 100%;
-  }
-}
-@media (min-width: 768px) {
-  .l-container {
-    width: 100%;
-  }
-}
-
-.l-wrapper {
-  width: 80.8433107756%;
-  height: 100%;
-}
-@media (min-width: 375px) {
-  .l-wrapper {
-    width: 100%;
-  }
-}
-@media (min-width: 768px) {
-  .l-wrapper {
-    width: 100%;
-  }
-}
-
 /*front*/
 .c-bg-Image-MV1 {
   aspect-ratio: 375/285;
@@ -506,6 +475,21 @@ img {
   align-items: center;
 }
 
+/*flex下書き →これやめてc-innerやってみる？*/
+.c-flex {
+  display: flex;
+}
+
+.c-flex-direction-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+
 .c-line-headingUnderline {
   position: relative;
 }
@@ -532,6 +516,22 @@ img {
   background-color: #FFFFFF;
   top: 80px;
   left: 0;
+}
+
+.c-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+@media (min-width: 375px) {
+  .c-container {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .c-container {
+    width: 100%;
+  }
 }
 
 .p-header {
@@ -994,6 +994,21 @@ img {
   opacity: 0.2855;
   visibility: visible;
   transition: opacity 1s, visibility 1s;
+}
+
+.p-wrapper {
+  width: 80.8433107756%;
+  height: 100%;
+}
+@media (min-width: 375px) {
+  .p-wrapper {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .p-wrapper {
+    width: 100%;
+  }
 }
 
 /*Foundation*/
