@@ -39,11 +39,22 @@
 
 
 /*MENUボタンから×印*/
+.js-btn-menu-open {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 200;
+
+    & span {
+        display: none;
+    }
+}
+
 .js-btn-menu-open::before {
     position: absolute;
     content: "";
-    top: 20px;
-    right: 35px;
+    top: 2px;
+    right: 18px;
     width: 5px;
     height: 35px;
     background-color: base.$bg-color-gray;
@@ -51,15 +62,15 @@
     z-index: 200;
     visibility: visible;
     opacity: 1;
-    transition: 0.5s;
+    transition-delay: 0.2s;
     
 }
 
 .js-btn-menu-open::after {
     position: absolute;
     content: "";
-    top: 20px;
-    right: 35px;
+    top: 2px;
+    right: 18px;
     width: 5px;
     height: 35px;
     background-color: base.$bg-color-gray;
@@ -67,6 +78,6 @@
     z-index: 200;
     visibility: visible;
     opacity: 1;
-    transition: 0.5s;
+    transition-delay: 0.2s;
 
 }
