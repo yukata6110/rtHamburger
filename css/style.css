@@ -534,6 +534,21 @@ img {
   }
 }
 
+.c-wrapper {
+  width: 80.8433107756%;
+  height: 100%;
+}
+@media (min-width: 375px) {
+  .c-wrapper {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .c-wrapper {
+    width: 100%;
+  }
+}
+
 .p-header {
   padding-left: 4%;
   padding-right: 2%;
@@ -575,6 +590,7 @@ img {
 }
 .p-main-textbox dd {
   font-weight: 400;
+  line-height: 1.7;
 }
 
 /*下部分：テキストと地図*/
@@ -1004,21 +1020,6 @@ img {
   opacity: 0.2855;
   visibility: visible;
   transition: opacity 1s, visibility 1s;
-}
-
-.p-wrapper {
-  width: 80.8433107756%;
-  height: 100%;
-}
-@media (min-width: 375px) {
-  .p-wrapper {
-    width: 100%;
-  }
-}
-@media (min-width: 768px) {
-  .p-wrapper {
-    width: 100%;
-  }
 }
 
 /*Foundation*/

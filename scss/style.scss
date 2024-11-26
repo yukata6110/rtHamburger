@@ -18,6 +18,7 @@
 @use "object/component/flex";
 @use "object/component/line";
 @use "object/component/container";
+@use "object/component/wrapper";
 
 /*object/project*/
 @use "object/project/header" as h;
@@ -30,4 +31,3 @@
 @use "object/project/main-map";
 @use "object/project/btn";
 @use "object/project/sidebar-move";
-@use "object/project/wrapper";
