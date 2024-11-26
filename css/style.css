@@ -930,7 +930,7 @@ img {
   z-index: 200;
   visibility: visible;
   opacity: 1;
-  transition-delay: 0.2s;
+  transition-delay: 0.65s;
 }
 
 .js-btn-menu-open::after {
@@ -945,7 +945,7 @@ img {
   z-index: 200;
   visibility: visible;
   opacity: 1;
-  transition-delay: 0.2s;
+  transition-delay: 0.65s;
 }
 
 /*jsでサイドバーオープン・クローズ*/
