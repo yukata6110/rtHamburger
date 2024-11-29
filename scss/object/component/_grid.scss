@@ -3,11 +3,11 @@
 .c-grid-container-frontMain {
     display: grid;
     place-content: center;
-    grid-row-gap: 1.5%;
+    /*grid-row-gap: 1%;*/
     grid-template-columns: repeat(1,95%); 
     
     @include base.breakpoint(tablet) {
-        grid-column-gap: 5% ;
+        /*grid-column-gap: 5% ;*/
         grid-template-columns: repeat(2,47%); 
     }
 
@@ -21,5 +21,8 @@
 .c-grid-item-frontMain {
     display: grid;
     grid-template-rows: subgrid;
-    
+
+    @include base.breakpoint(pc) {
+        margin: 0;
+    }
 }
