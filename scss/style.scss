@@ -19,10 +19,11 @@
 @use "object/component/line";
 @use "object/component/container";
 @use "object/component/wrapper";
+@use "object/component/inner";
 
 /*object/project*/
 @use "object/project/header" as h;
-@use "object/project/main" as m;
+@use "object/project/main" as m;    
 @use "object/project/footer" as f;
 @use "object/project/sidebar" as s;
 @use "object/project/search-form";
@@ -31,3 +32,10 @@
 @use "object/project/main-map";
 @use "object/project/btn";
 @use "object/project/sidebar-move";
+@use "object/project/archive-image";
+@use "object/project/archive-article";
+@use "object/project/subheading";
+@use "object/project/grid-text";
+@use "object/project/grid-img";
+@use "object/project/pagination";
+@use "object/project/pagination-sp";

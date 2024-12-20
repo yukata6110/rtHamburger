@@ -1,0 +1,38 @@
+@use "../../foundation/base" as base;
+
+.p-pagination-sp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5% 3%;
+
+    @include base.breakpoint(tablet){
+        display: none;
+    }
+
+    @include base.breakpoint(pc){
+        display: none;
+    }
+}
+
+.p-pagination-sp-prev {
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+
+    p{
+        padding-left: 10px;
+    }
+    
+}
+
+.p-pagination-sp-next {
+    display: flex;
+    align-items: center;
+    margin-right: 2%;
+
+    p{
+        padding-right: 10px;
+    }
+    
+}
