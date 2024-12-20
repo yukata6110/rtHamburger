@@ -1222,11 +1222,19 @@ img {
   }
 }
 
+.p-pagination-number a {
+  color: #707070;
+}
+
 @media (min-width: 768px) {
   .p-pagination-number-list {
     display: flex;
     font-size: 1rem;
   }
+}
+
+.p-pagination-number-list a {
+  color: #707070;
 }
 
 @media (min-width: 768px) {
@@ -1243,7 +1251,14 @@ img {
 @media (min-width: 768px) {
   .p-pagination-number-list li:first-child {
     margin-left: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-pagination-number-list li:hover {
     background-color: #000000;
+  }
+  .p-pagination-number-list li:hover a {
     color: #FFFFFF;
   }
 }

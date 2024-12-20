@@ -25,12 +25,19 @@
     }
 }
 
+.p-pagination-number a {
+    color: #707070;
+}
+
 .p-pagination-number-list {
     @include base.breakpoint(tablet) {
         display: flex;
         @include base.font-rem(16);
     }
+}
 
+.p-pagination-number-list a {
+    color: base.$font-color-gray;
 }
 
 .p-pagination-number-list li {
@@ -47,9 +54,19 @@
 .p-pagination-number-list li:first-child {
     @include base.breakpoint(tablet) {
         margin-left: 12px;
-        background-color: base.$bg-color-black;
-        color: base.$font-color-white;
     }
 }
+
+.p-pagination-number-list li:hover {
+    @include base.breakpoint(tablet) {
+        background-color: base.$bg-color-black;
+        
+        a {
+            color: base.$font-color-white;
+        }
+        
+    }
+}
+
 
 
