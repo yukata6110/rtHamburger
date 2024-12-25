@@ -1049,6 +1049,11 @@ img {
   transition-delay: 0.65s;
 }
 
+/*サイドバーでている時、コンテンツはスクロールしない*/
+.js-body-scroll {
+  overflow: hidden;
+}
+
 /*jsでサイドバーオープン・クローズ*/
 /*隠れている状態*/
 @media (min-width: 375px) {
@@ -1066,12 +1071,14 @@ img {
 .js-sidebar-open {
   transform: translateX(-100%);
   width: 90vw;
-  position: absolute;
-  background-color: pink; /*base.$bg-color-beige1*/
+  position: fixed;
+  background-color: #FFF7EF;
   z-index: 100;
   transition: 1s;
   top: 0;
   bottom: 0;
+  /*サイドバーのみスクロールできる*/
+  overflow: auto;
 }
 @media (min-width: 768px) {
   .js-sidebar-open {
