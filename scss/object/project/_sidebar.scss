@@ -37,7 +37,7 @@
 
 .p-sidebar-list {
     position: absolute;
-    height: 100%;
+    
 
     & a {
         color: base.$font-color-gray;
@@ -47,6 +47,7 @@
         position: static;
         display: block;
         background-color: base.$bg-color-beige2;
+        height: 100%;
     }
 }
 

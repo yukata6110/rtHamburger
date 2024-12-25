@@ -10,9 +10,13 @@
 
 .p-footer-about {
     @include base.font-rem(20);
-    margin-top: 1%;
-    margin-bottom: 2%;
+    margin-top: 2.5%;
+    margin-bottom: 6%;
 
+    @include base.breakpoint(pc) {
+        margin-top: 1%;
+        margin-bottom: 2%;
+    }
 }
 
 .p-footer-info::after {
@@ -28,6 +32,10 @@
 }
 
 .p-footer-copyright {
-    margin-top: 1%;
+    margin-bottom: 3%;
     @include base.font-rem(14);
+
+    @include base.breakpoint(pc) {
+        margin-bottom: 1%;
+    }
 }

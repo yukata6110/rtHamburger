@@ -18,10 +18,13 @@
 .js-sidebar-open {
     transform: translateX(-100%);
     width: 90vw;
-    position: relative;
-    background-color: base.$bg-color-beige1;
+    position: absolute;
+    background-color: pink; /*base.$bg-color-beige1*/
     z-index: 100;
     transition: 1s;
+    top:0;
+    bottom: 0;
+    
 
     @include base.breakpoint(tablet) {
         width: 45vw;
