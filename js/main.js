@@ -17,5 +17,6 @@ window.addEventListener('resize', ()=>{
     btn.classList.remove('js-btn-menu-open');
     sidebarList.classList.remove('js-sidebar-open');
     sidebarListBg.classList.remove('js-sidebar-openBg');
+    body.classList.remove('js-body-scroll');
 })
 
