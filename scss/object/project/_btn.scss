@@ -1,5 +1,6 @@
 @use '../../foundation/base' as base;
 
+
 /*PC画面では×印非表示*/
 .js-btn-menu {
     position: relative;
@@ -35,9 +36,6 @@
     
 }
 
-
-
-
 /*MENUボタンから×印*/
 .js-btn-menu-open {
     width: 40px;
@@ -62,8 +60,7 @@
     z-index: 200;
     visibility: visible;
     opacity: 1;
-    transition-delay: 0.65s;
-    
+    transition-delay: 0.48s;
 }
 
 .js-btn-menu-open::after {
@@ -78,5 +75,5 @@
     z-index: 200;
     visibility: visible;
     opacity: 1;
-    transition-delay: 0.65s;
+    transition-delay: 0.48s;
 }

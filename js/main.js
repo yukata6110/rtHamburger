@@ -19,4 +19,3 @@ window.addEventListener('resize', ()=>{
     sidebarListBg.classList.remove('js-sidebar-openBg');
     body.classList.remove('js-body-scroll');
 })
-

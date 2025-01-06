@@ -304,6 +304,7 @@ ul, li, ol {
 
 a {
   text-decoration: none;
+  white-space: nowrap;
 }
 
 img {
@@ -731,7 +732,6 @@ img {
   }
 }
 
-/*aside２つのとき*/
 .p-sidebar {
   position: relative;
 }
@@ -1031,7 +1031,7 @@ img {
   z-index: 200;
   visibility: visible;
   opacity: 1;
-  transition-delay: 0.65s;
+  transition-delay: 0.48s;
 }
 
 .js-btn-menu-open::after {
@@ -1046,7 +1046,7 @@ img {
   z-index: 200;
   visibility: visible;
   opacity: 1;
-  transition-delay: 0.65s;
+  transition-delay: 0.48s;
 }
 
 /*サイドバーでている時、コンテンツはスクロールしない*/
@@ -1056,14 +1056,21 @@ img {
 
 /*jsでサイドバーオープン・クローズ*/
 /*隠れている状態*/
-@media (min-width: 375px) {
-  .js-sidebar {
-    transform: translateX(0);
-  }
+.js-sidebar {
+  transform: translateX(0);
+  overflow: hidden;
+  position: fixed;
+  background-color: #FFF7EF;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  transition: 1s;
 }
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .js-sidebar {
-    transform: translateX(0);
+    position: static;
+    background-color: #F2ede9;
+    transition: none;
   }
 }
 
@@ -1071,12 +1078,6 @@ img {
 .js-sidebar-open {
   transform: translateX(-100%);
   width: 90vw;
-  position: fixed;
-  background-color: #FFF7EF;
-  z-index: 100;
-  transition: 1s;
-  top: 0;
-  bottom: 0;
   /*サイドバーのみスクロールできる*/
   overflow: auto;
 }

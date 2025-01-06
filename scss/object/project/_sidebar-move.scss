@@ -9,14 +9,19 @@
 /*jsでサイドバーオープン・クローズ*/
 /*隠れている状態*/
 .js-sidebar {
-    @include base.breakpoint(sp) {
-        transform: translateX(0);
-        
-    }
+    transform: translateX(0);
+    overflow: hidden;
+    position: fixed;
+    background-color: base.$bg-color-beige1; 
+    z-index: 100;
+    top:0;
+    bottom: 0;
+    transition: 1s;
 
-    @include base.breakpoint(tablet) {
-        transform: translateX(0);
-        
+    @include base.breakpoint(pc) {
+        position: static;
+        background-color: base.$bg-color-beige2;
+        transition: none;
     }
 }
 
@@ -24,26 +29,17 @@
 .js-sidebar-open {
     transform: translateX(-100%);
     width: 90vw;
-    position: fixed;
-    background-color: base.$bg-color-beige1; 
-    z-index: 100;
-    transition: 1s;
-    top:0;
-    bottom: 0;
     /*サイドバーのみスクロールできる*/
     overflow: auto;
-    
 
     @include base.breakpoint(tablet) {
         width: 45vw;
     }
-    
 }
 
 /*MENUクリック前のopenBg*/
 .js-sidebar-bg {
-    position: relative;
-    
+    position: relative;   
 }
 
 .js-sidebar-bg::before {
@@ -62,15 +58,13 @@
 
 /*サイドバー出てきたときの背景グレーになる*/
 .js-sidebar-openBg {
-    position: relative;
-    
+    position: relative;    
 }
 
 .js-sidebar-openBg::before {
     opacity: 0.2855;
     visibility: visible;
     transition: opacity 1s, visibility 1s;
-
 }
 
 

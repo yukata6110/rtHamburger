@@ -1,10 +1,9 @@
 @use '../../foundation/base' as base;
 
-/*aside２つのとき*/
 .p-sidebar {
-    position: relative;
-    
+    position: relative;    
 }
+
 
 .p-sidebar-title {
     position: absolute;
@@ -20,7 +19,6 @@
         margin-bottom: 0;
         display: block;
     }
-    
 
     & h2 {
         @include base.font-rem(24);
@@ -37,7 +35,6 @@
 
 .p-sidebar-list {
     position: absolute;
-    
 
     & a {
         color: base.$font-color-gray;
