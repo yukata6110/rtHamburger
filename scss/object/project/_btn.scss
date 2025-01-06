@@ -15,7 +15,7 @@
     height: 35px;
     background-color: base.$bg-color-gray;
     transform: rotate(-45deg);
-    z-index: 200;
+    z-index: 300;
     visibility: hidden;
     opacity: 0;
     
@@ -30,7 +30,7 @@
     height: 35px;
     background-color: base.$bg-color-gray;
     transform: rotate(45deg);
-    z-index: 200;
+    z-index: 300;
     visibility: hidden;
     opacity: 0;
     
@@ -41,7 +41,7 @@
     width: 40px;
     height: 40px;
     position: absolute;
-    z-index: 200;
+    z-index: 300;
 
     & span {
         display: none;
@@ -57,7 +57,7 @@
     height: 35px;
     background-color: base.$bg-color-gray;
     transform: rotate(-45deg);
-    z-index: 200;
+    z-index: 300;
     visibility: visible;
     opacity: 1;
     transition-delay: 0.48s;
@@ -72,7 +72,7 @@
     height: 35px;
     background-color: base.$bg-color-gray;
     transform: rotate(45deg);
-    z-index: 200;
+    z-index: 300;
     visibility: visible;
     opacity: 1;
     transition-delay: 0.48s;
