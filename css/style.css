@@ -1285,18 +1285,15 @@ img {
   color: #FFFFFF;
 }
 
-/*
-.p-pagination-number-list li:hover {
-    @include base.breakpoint(tablet) {
-        background-color: base.$bg-color-black;
-
-        a {
-            color: base.$font-color-white;
-        }
-
-    }
+@media (min-width: 768px) {
+  .p-pagination-number-list li:hover {
+    background-color: #3c2b1c;
+  }
+  .p-pagination-number-list li:hover a {
+    color: #FFFFFF;
+  }
 }
-*/
+
 .p-pagination-sp {
   display: flex;
   justify-content: space-between;
