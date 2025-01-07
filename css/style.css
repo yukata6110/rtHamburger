@@ -849,6 +849,9 @@ img {
   padding-left: 30px;
   line-height: 2;
   background-color: #FFFFFF;
+  color: #707070;
+  font-size: 0.875rem;
+  text-indent: 1rem;
 }
 
 .p-header-searchicon::before {
@@ -1269,21 +1272,31 @@ img {
   }
 }
 
+.p-pagination-number-list li:first-child {
+  background-color: #3c2b1c;
+}
 @media (min-width: 768px) {
   .p-pagination-number-list li:first-child {
     margin-left: 12px;
   }
 }
 
-@media (min-width: 768px) {
-  .p-pagination-number-list li:hover {
-    background-color: #000000;
-  }
-  .p-pagination-number-list li:hover a {
-    color: #FFFFFF;
-  }
+.p-pagination-number-list li:first-child a {
+  color: #FFFFFF;
 }
 
+/*
+.p-pagination-number-list li:hover {
+    @include base.breakpoint(tablet) {
+        background-color: base.$bg-color-black;
+
+        a {
+            color: base.$font-color-white;
+        }
+
+    }
+}
+*/
 .p-pagination-sp {
   display: flex;
   justify-content: space-between;

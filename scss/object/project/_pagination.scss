@@ -52,11 +52,20 @@
 }
 
 .p-pagination-number-list li:first-child {
+    background-color: base.$bg-color-darkbrown;
+
     @include base.breakpoint(tablet) {
         margin-left: 12px;
     }
+
+
 }
 
+.p-pagination-number-list li:first-child a {
+    color: base.$font-color-white;
+}
+
+/*
 .p-pagination-number-list li:hover {
     @include base.breakpoint(tablet) {
         background-color: base.$bg-color-black;
@@ -67,6 +76,6 @@
         
     }
 }
-
+*/
 
 

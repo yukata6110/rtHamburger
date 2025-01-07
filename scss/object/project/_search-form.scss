@@ -26,6 +26,9 @@
     padding-left: 30px;
     line-height: 2;
     background-color: base.$bg-color-white;
+    color: base.$font-color-gray;
+    @include base.font-rem(14);
+    text-indent: 1rem;
 }
 
 .p-header-searchicon::before {
