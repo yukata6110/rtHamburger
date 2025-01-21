@@ -33,8 +33,8 @@
 /*singleとpage*/
 .c-bg-Image-MV3 {
     aspect-ratio: 375/225;
-    background-size: cover;
-    background-position: center;
+    background-size: 145%;
+    background-position: 50% 80%;
 
     @include base.breakpoint(tablet) {
         aspect-ratio: 834/505;
@@ -42,6 +42,9 @@
 
     @include base.breakpoint(pc) {
         aspect-ratio: 1553/500;
+        background-size: cover;
+        background-position: center;
+
     }
 }
 

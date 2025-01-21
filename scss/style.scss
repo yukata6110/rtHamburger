@@ -20,6 +20,7 @@
 @use "object/component/container";
 @use "object/component/wrapper";
 @use "object/component/inner";
+@use "object/component/section";
 
 /*object/project*/
 @use "object/project/header" as h;
@@ -33,9 +34,17 @@
 @use "object/project/btn";
 @use "object/project/sidebar-move";
 @use "object/project/archive-image";
-@use "object/project/archive-article";
 @use "object/project/subheading";
 @use "object/project/grid-text";
 @use "object/project/grid-img";
 @use "object/project/pagination";
 @use "object/project/pagination-sp";
+@use "object/project/single-image";
+@use "object/project/single-article";
+@use "object/project/blockquote";
+@use "object/project/single-grid";
+@use "object/project/single-list";
+@use "object/project/single-code";
+@use "object/project/single-table";
+@use "object/project/single-btn";
+@use "object/project/single-bold";
