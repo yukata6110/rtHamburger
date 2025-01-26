@@ -652,14 +652,14 @@ img {
 }
 
 .c-eyecatch-title-mv2 {
-  color: red;
+  color: #FFFFFF;
   font-size: 3.125rem;
   padding-top: 5%;
   padding-left: 5%;
 }
 @media (min-width: 768px) {
   .c-eyecatch-title-mv2 {
-    ppadding-top: 5%;
+    padding-top: 5%;
     padding-left: 5%;
   }
 }
