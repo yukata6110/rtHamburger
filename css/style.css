@@ -340,7 +340,7 @@ img {
 }
 
 .l-main {
-  height: 88%;
+  height: 100%;
   width: 100%;
 }
 
@@ -353,56 +353,68 @@ img {
   }
 }
 
+.c-image-mv {
+  position: relative;
+}
+
 /*front*/
-.c-bg-Image-MV1 {
+.c-image-mv1 {
   aspect-ratio: 375/285;
-  background-size: cover;
-  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  position: absolute;
+  z-index: -100;
+  top: 0;
 }
 @media (min-width: 768px) {
-  .c-bg-Image-MV1 {
+  .c-image-mv1 {
     aspect-ratio: 834/285;
   }
 }
 @media (min-width: 1280px) {
-  .c-bg-Image-MV1 {
+  .c-image-mv1 {
     aspect-ratio: 1553/530;
   }
 }
 
 /*archiveとarchive-search*/
-.c-bg-Image-MV2 {
+.c-image-mv2 {
   aspect-ratio: 375/285;
   background-size: cover;
   background-position: center;
 }
 @media (min-width: 768px) {
-  .c-bg-Image-MV2 {
+  .c-image-mv2 {
     aspect-ratio: 834/285;
   }
 }
 @media (min-width: 1280px) {
-  .c-bg-Image-MV2 {
+  .c-image-mv2 {
     aspect-ratio: 1553/239;
   }
 }
 
 /*singleとpage*/
-.c-bg-Image-MV3 {
+.c-image-mv3 {
   aspect-ratio: 375/225;
-  background-size: 145%;
-  background-position: 50% 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  position: absolute;
+  z-index: -100;
+  top: 0;
 }
 @media (min-width: 768px) {
-  .c-bg-Image-MV3 {
+  .c-image-mv3 {
     aspect-ratio: 834/505;
   }
 }
 @media (min-width: 1280px) {
-  .c-bg-Image-MV3 {
+  .c-image-mv3 {
     aspect-ratio: 1553/500;
-    background-size: cover;
-    background-position: center;
   }
 }
 
@@ -618,6 +630,62 @@ img {
 
 .c-section-single {
   padding-bottom: 5%;
+}
+
+.c-eyecatch-title-mv1 {
+  color: #FFFFFF;
+  font-size: 2.375rem;
+  padding-top: 33%;
+  padding-left: 8%;
+}
+@media (min-width: 768px) {
+  .c-eyecatch-title-mv1 {
+    font-size: 2.75rem;
+    padding-top: 13%;
+  }
+}
+@media (min-width: 1280px) {
+  .c-eyecatch-title-mv1 {
+    font-size: 3rem;
+    padding-left: 5%;
+  }
+}
+
+.c-eyecatch-title-mv2 {
+  color: red;
+  font-size: 3.125rem;
+  padding-top: 5%;
+  padding-left: 5%;
+}
+@media (min-width: 768px) {
+  .c-eyecatch-title-mv2 {
+    ppadding-top: 5%;
+    padding-left: 5%;
+  }
+}
+@media (min-width: 1280px) {
+  .c-eyecatch-title-mv2 {
+    padding-top: 5%;
+    padding-left: 5%;
+  }
+}
+
+.c-eyecatch-title-mv3 {
+  color: #FFFFFF;
+  font-size: 2.375rem;
+  padding-top: 25%;
+  padding-left: 8%;
+}
+@media (min-width: 768px) {
+  .c-eyecatch-title-mv3 {
+    font-size: 3.125rem;
+  }
+}
+@media (min-width: 1280px) {
+  .c-eyecatch-title-mv3 {
+    padding-top: 12%;
+    padding-left: 5%;
+  }
 }
 
 .p-header {
@@ -889,31 +957,17 @@ img {
   line-height: 2;
 }
 
-.p-main-image {
-  background-image: url(../../../Images/frontpage_eyecatch.png);
-  color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  padding: 5%;
-  font-size: 1.625rem;
+.p-order {
+  padding: 35% 0 10% 0;
 }
 @media (min-width: 768px) {
-  .p-main-image {
-    padding: 10%;
+  .p-order {
+    padding: 15% 0 10% 0;
   }
-}
-@media (min-width: 1280px) {
-  .p-main-image {
-    padding: 5%;
-  }
-}
-
-.p-order {
-  padding: 5% 5% 10% 5%;
 }
 @media (min-width: 1280px) {
   .p-order {
-    padding: 7%;
+    padding: 20% 0 7% 0;
   }
 }
 
@@ -1338,24 +1392,6 @@ img {
   padding-right: 10px;
 }
 
-.p-single-image {
-  background-image: url(../../../Images/singlepage_burger.png);
-  color: #FFFFFF;
-  padding: 5%;
-  font-size: 2.375rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (min-width: 768px) {
-  .p-single-image {
-    font-size: 3.125rem;
-  }
-}
-
 .p-single-image-hamburger {
   aspect-ratio: 1353/500;
   -o-object-position: 50% 78%;
@@ -1396,6 +1432,14 @@ img {
 }
 .p-single-article p {
   font-weight: 400;
+}
+.p-single-article h2 {
+  padding-top: 33%;
+}
+@media (min-width: 1280px) {
+  .p-single-article h2 {
+    padding-top: 17%;
+  }
 }
 .p-single-article p, .p-single-article h2, .p-single-article h3, .p-single-article h4, .p-single-article h5, .p-single-article h6 {
   padding-bottom: 5%;

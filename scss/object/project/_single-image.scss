@@ -1,24 +1,5 @@
 @use '../../foundation/base' as base;
 
-.p-single-image {
-    background-image: url(../../../Images/singlepage_burger.png);
-    color: base.$font-color-white;
-    padding: 5%;
-    @include base.font-rem(38);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    object-fit: cover;
-
-    @include base.breakpoint(tablet) {
-        @include base.font-rem(50);
-    }
-
-}
-
-
-
 .p-single-image-hamburger {
     aspect-ratio: 1353/500;
     object-position: 50% 78%;

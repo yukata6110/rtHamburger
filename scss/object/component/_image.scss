@@ -1,10 +1,17 @@
 @use '../../foundation/base' as base;
 
+.c-image-mv {
+    position: relative;
+}
+
 /*front*/
-.c-bg-Image-MV1 {
+.c-image-mv1 {
     aspect-ratio: 375/285;
-    background-size: cover;
-    background-position: center;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    z-index: -100;
+    top:0;
     
     @include base.breakpoint(tablet) {
         aspect-ratio: 834/285;
@@ -16,10 +23,11 @@
 }
 
 /*archiveとarchive-search*/
-.c-bg-Image-MV2 {
+.c-image-mv2 {
     aspect-ratio: 375/285;
     background-size: cover;
     background-position: center;
+
 
     @include base.breakpoint(tablet) {
         aspect-ratio: 834/285;
@@ -31,10 +39,13 @@
 }
 
 /*singleとpage*/
-.c-bg-Image-MV3 {
+.c-image-mv3 {
     aspect-ratio: 375/225;
-    background-size: 145%;
-    background-position: 50% 80%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    z-index: -100;
+    top:0;
 
     @include base.breakpoint(tablet) {
         aspect-ratio: 834/505;
@@ -42,9 +53,6 @@
 
     @include base.breakpoint(pc) {
         aspect-ratio: 1553/500;
-        background-size: cover;
-        background-position: center;
-
     }
 }
 

@@ -1,10 +1,14 @@
 @use '../../foundation/base' as base;
 
 .p-order {
-    padding: 5% 5% 10% 5%;
+    padding: 35% 0 10% 0;
+
+    @include base.breakpoint(tablet) {
+        padding: 15% 0 10% 0;
+    }
 
     @include base.breakpoint(pc) {
-        padding: 7%;
+        padding: 20% 0 7% 0;
     }
 }
 

@@ -10,7 +10,7 @@
 @use "layout/sidebar";
 
 /*object/component*/
-@use "object/component/bgImage";
+@use "object/component/image";
 @use "object/component/box";
 @use "object/component/item";
 @use "object/component/fontfam";
@@ -21,6 +21,7 @@
 @use "object/component/wrapper";
 @use "object/component/inner";
 @use "object/component/section";
+@use "object/component/c-eyecatch";
 
 /*object/project*/
 @use "object/project/header" as h;
@@ -28,7 +29,6 @@
 @use "object/project/footer" as f;
 @use "object/project/sidebar" as s;
 @use "object/project/search-form";
-@use "object/project/main-image";
 @use "object/project/main-order";
 @use "object/project/main-map";
 @use "object/project/btn";
