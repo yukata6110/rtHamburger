@@ -53,4 +53,5 @@
     font-family: "M PLUS 1";
     color: base.$font-color-gray;
     line-height: 2;
+    @include base.font-rem(14);
 }

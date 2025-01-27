@@ -776,6 +776,9 @@ img {
   padding: 2%;
   font-weight: 400;
 }
+.p-footer a {
+  color: #FFFFFF;
+}
 
 .p-footer-about {
   font-size: 1.25rem;
@@ -955,6 +958,7 @@ img {
   font-family: "M PLUS 1";
   color: #707070;
   line-height: 2;
+  font-size: 0.875rem;
 }
 
 .p-order {
