@@ -11,35 +11,3 @@
         color: base.$font-color-white;
     }
 }
-
-.p-footer-about {
-    @include base.font-rem(20);
-    margin-top: 2.5%;
-    margin-bottom: 6%;
-
-    @include base.breakpoint(pc) {
-        margin-top: 1%;
-        margin-bottom: 2%;
-    }
-}
-
-.p-footer-info::after {
-    content: "|";
-    color: base.$font-color-white;
-    @include base.font-rem(20);
-    padding: 10px;
-}
-
-
-.p-footer-history {
-    position: relative;
-}
-
-.p-footer-copyright {
-    margin-bottom: 3%;
-    @include base.font-rem(14);
-
-    @include base.breakpoint(pc) {
-        margin-bottom: 1%;
-    }
-}
