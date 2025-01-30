@@ -15,12 +15,16 @@
     }
 }
 
+.p-pagination-sp a:hover{
+    opacity: 0.7;
+}
+
 .p-pagination-sp-prev {
     display: flex;
     align-items: center;
     margin-left: 2%;
 
-    p{
+    a{
         padding-left: 10px;
     }
     
@@ -31,7 +35,7 @@
     align-items: center;
     margin-right: 2%;
 
-    p{
+    a{
         padding-right: 10px;
     }
     

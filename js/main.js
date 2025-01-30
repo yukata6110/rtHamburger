@@ -4,6 +4,7 @@ const sidebarList = document.querySelector ('.js-sidebar');
 const sidebarListBg = document.querySelector ('.js-sidebar-bg');
 const body = document.body;
 
+
 btn.addEventListener ('click', ()=> {
     btn.classList.toggle('js-btn-menu-open');
     sidebarList.classList.toggle('js-sidebar-open');

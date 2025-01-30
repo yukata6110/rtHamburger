@@ -1,3 +1,42 @@
+/*
+@use '../../foundation/base' as base;
+
+.p-sidebar {
+    position: relative;    
+}
+
+
+.p-sidebar-title {
+    position: absolute;
+    top: 0.5%;
+    left: -90px;
+
+    @include base.breakpoint(pc){
+        position: static;
+        background-color: base.$bg-color-beige2;
+        padding-top: 24%;
+        padding-bottom: 15%;
+        padding-left: 10%;
+        margin-bottom: 0;
+        display: block;
+    }
+
+    & h2 {
+        @include base.font-rem(24);
+    }
+}
+
+.p-sidebar-btn-menu {
+    color: base.$font-color-gray;
+
+    @include base.breakpoint(pc) {
+        pointer-events: none;
+    }
+}
+
+*/
+
+/*sidebar-listに分けた部分を戻す*/
 @use '../../foundation/base' as base;
 
 .p-sidebar {
@@ -46,6 +85,10 @@
         background-color: base.$bg-color-beige2;
         height: 100%;
     }
+}
+
+.p-sidebar-list a:hover {
+    opacity: 0.7;
 }
 
 .p-sidebar-wrap {
